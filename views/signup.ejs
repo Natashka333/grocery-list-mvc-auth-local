@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
+    <!-- Header -->
+    <div class="container">
+        <div class="header">
+                <img class="header-pic" src="../images/mango.jpg">
+                 <h2 class="header-h2">Project Super Team Presents...</h2>
+                <h1 class="header-h1">The Grocery List App</h1>
+        </div>
+    </div>
+
+ <!-- MainBody -->
+ <div class="mainBody container">
+
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
@@ -19,5 +32,15 @@
         <input type="password" name="confirmPassword" placeholder="Confirm Password">
         <input type="submit">
     </form>
+</div>
+
+    <!-- Footer-->
+    <div class="container">
+        <div class="footer">
+                <img class="footer-pic" src="../images/artichoke-tiny.jpg">
+                <p class="footer-p">Project Super Team &copy; 2022</p>
+        </div>
+    </div>
+
 </body>
 </html>
