@@ -1,44 +1,25 @@
-# Introduction
+# The Grocery List App
+An application that allows you to create, edit, and save your grocery shopping list :apple:
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
+<a href="https://ibb.co/5L4MDRy"><img src="https://i.ibb.co/DQWVXRy/groceryapplandingpage.png" alt="groceryapplandingpage" border="0" /></a>
 
----
+Link: [The Grocery List App](https://renaes-version.herokuapp.com/)
 
-> Be sure to add that lovely star 😀 and fork it for your own copy
+## Packages/Dependencies
 
----
-
-# Objectives
-
-- It's a beginner level app created to understand how MVC concept and logins are added
-
----
-
-# Who is this for? 
-
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
-
----
-
-# Packages/Dependencies used 
-
-bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
-
----
-
-# Install all the dependencies or node packages used for development via Terminal
-
-`npm install` 
-
----
-
-# Things to add
-
-- Create a `.env` file and add the following as `key: value` 
-  - PORT: 2121 (can be any port example: 3000) 
-  - DB_STRING: `your database URI` 
- ---
- 
- Have fun testing and improving it! 😎
+**Tech used:** bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
 
 
+## Optimizations
+- [X] Created a Login page
+- [X] Added a Sign Up page
+- [X] Enabled users to add & delete items in a list
+
+In the future we'd like to incorporate:
+- [ ] the ability to add suggested items based on previous shopping lists
+- [ ] the ability to share a list with other users
+
+
+## Who is Project Super Team?
+[Nataly Chernenko](https://github.com/Natashka333), [RenaePeppers](https://github.com/RenaePeppers)
+, [Christopher Gopeesingh](https://github.com/crisantogo), [Noble Nwachukwu](https://github.com/noblenwachukwu), and [Lou Iverson](https://github.com/louiver)
