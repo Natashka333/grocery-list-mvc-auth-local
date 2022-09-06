@@ -1,5 +1,4 @@
 
-
 /* importing "Dancing Script", "Luckiest Guy", and "Roboto" fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Luckiest+Guy&family=Roboto&display=swap');
 /* ****************************** */
@@ -11,11 +10,11 @@
 } 
 .completed{
     text-decoration: line-through;
-    color: gray;
+    color: var(--secondary-color);
 }
-.not{
+/* .not{
     text-decoration: underline;
-}
+} */
 /* ****************************** */
 /* ****************************** */  
 /* this section is general formatting */
@@ -26,6 +25,8 @@
       --black-blue:hsl(218, 28%, 14%);
       --teal-color: rgb(130, 163, 161);
       --green-color: rgb(159, 196, 144);
+      --egg-color:rgb(215,152,111);
+      --gray-color:rgb(153,149,157);
     }
 * {
     box-sizing: border-box;
@@ -37,23 +38,25 @@
     margin: 0;
     overflow:visible;
     padding: 0px;
+    border: solid 4px var(--teal-color);
+    margin-left:auto;
+    margin-right: auto;
     }
 body {
     font-family: 'Roboto', sans-serif;
     color: rgb(27, 24, 24);
     line-height: 1.5;
     }
+html, body {
+    margin: 0px;
+    height:100%;
+}
 ul {
-    list-style-type: none;
-    }
+    list-style-type: decimal;
+}
 a {
     text-decoration: none;
-    color: rgb(27, 24, 24)
-    }
-h1 {
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 10px 0;
+    color: var(--gray-color);
     }
 h2 {
     font-weight: 200;
@@ -65,10 +68,33 @@ p {
     font-family:'Roboto', sans-serif;
     font-size: 1.2rem;
     }
+.outside {
+        background-color: var(--dark-color);   
+        width: 100%;
+        min-height: 100%;
+    }
+.button-format {
+    background-color: var(--dark-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--gray-color);
+    height: 50px;
+    width: 160px;
+    border-radius: 10px;
+    margin: 6px;
+    border: var(--gray-color) solid 3px;
+    padding: 12px 20px;
+    font-size: 1.5rem;
+}
+.button-format:active {
+        background-color:var(--dark-color);;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+}
 /* ****************************** */
 /* ****************************** */   
 /* header section */
 .header {
+    max-width: 1440;
     background-color: var(--dark-color);
     color:#b4becb;
     height: auto;
@@ -82,7 +108,7 @@ p {
     align-items: start;
     column-gap: 10px;
     row-gap: 0px;
-    justify-content:center;
+    justify-content:center; 
     overflow: visible;
     }
      /*the next lines assign tags to grid-template-areas*/
@@ -90,8 +116,8 @@ p {
     .header-h2 {    grid-area: header-h2;}
     .header-h1{    grid-area: header-h1;}
 .header-pic {
-    width: auto;
-    margin: 25px 40px;
+    width: 30%;
+    margin: 15px 40px;
  /*    border:yellow solid 10px; */
     align-self: center; /*centers vertically*/
     justify-self: right; /*keeps it on right side of grid*/
@@ -99,7 +125,7 @@ p {
 .header-h2 {
     font-family: 'Dancing Script', cursive, sans-serif;
     color: var(--green-color);
-    padding: 25px 10px 10px 0px;
+    padding: 10px 10px 10px 0px;
     font-size: 2rem;
     /* border:white solid 10px; */
 }
@@ -121,7 +147,6 @@ p {
     display: grid;
     grid-template-columns: 2fr 1fr ;   
     grid-template-rows: 1fr;
- /*    align-items: start; */
     column-gap: 10px;
     justify-content:center;
     overflow: visible;
@@ -142,7 +167,7 @@ p {
     justify-self: left; /*keeps it on right side of grid*/
     grid-column:2;
     grid-row: 1;
-    }   
+}   
 /* ****************************** */
 /* ****************************** */   
 /* mainBody section */
@@ -151,18 +176,162 @@ p {
     min-height: 600px;
     background-size: cover;
     background-color: var(--dark-color);
-    border-top: solid 25px var(--dark-color);
+    /* border-top: solid 25px var(--dark-color); */
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-left:auto;
+    margin-right: auto;
 }
-.mainBody a, h1 { 
-    font-size: 3rem;
-    color:white;
+/* .mainBody h1 { 
+    font-size: 3.5rem;
     margin-left:25px;
-}
+    padding-bottom: 5%;
+    color: white;
+} */
+/* .mainBody a { 
+    font-size: 2rem;
+    margin-left:25px;
+    padding: 8px;
+    color: var(--green-color);
+} */
 .mainBody a:hover {
-        border-bottom: 2px #fff solid;
-      }
+        border: 2px #fff solid;
+}
+input{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    padding: 12px 20px;
+    margin:8px 0;
+}
+input[type=submit] {
+    background-color: var(--dark-color);;
+    height: 50px;
+    width: 160px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    margin: 6px;
+    border: var(--gray-color) solid 3px;
+    color: var(--gray-color);
+    padding-bottom:  40px;
+}
+.card-list {
+    width:100%;
+    background: var(--green-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(17,12,46,0.15) 0px 48px 100px 0px ;
+    margin-bottom: 10px;
+    overflow:auto;
+}
 
+.grid-list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin:100px auto;
+    padding: 20px;
+    gap:30px;
+    max-width:1440px;
+}
+.grid-list1 {
+    grid-column: 1/3;
+}
+.grid-list2 {
+    grid-column:1;
+}
+.grid-list2 h2, span, i{
+    background-color: var(--green-color);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    margin-left: 3px;
+}
+i>span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    line-height: 1.2;
+    margin: 10px 0;
+}
 
+.grid-list3 {
+    grid-column: 2;
+}
+.grid-list1 h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--green-color);
+    font-family: 'Luckiest Guy', sans-serif;
+    padding: 10px 10px 10px 100px;
+    margin: 10px 5px 10px 5px;
+      -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.grid-list3 ul{
+    width:100%;
+    background-color: var(--green-color);
+}
+.grid-list3 li {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    width:300px;
+    line-height: 2;
+    padding-left: 5px;
+    margin-left:15px;
+}
+/* ****************************** */
+/* ****************************** */   
+/* signup page  */
+.signup-card {
+    width:400px;
+    background: var(--green-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(17,12,46,0.15) 0px 48px 100px 0px ;
+    margin-bottom: 10px;
+    overflow:auto;
+    margin: 50px 0px 0px 50px;
+}
+.alert-danger {
+    font-size: 3rem;
+    font-weight: bolder;
+    font-weight: 300;
+    line-height: 1.2;
+    color: red;
+    font-family: 'Luckiest Guy', sans-serif;
+    padding: 10px 10px 10px 100px;
+    margin: 10px 5px 10px 5px;
+      -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+/* ****************************** */
+/* ****************************** */   
+/* homepage (aka index.ejs view) */
+.homepage{
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-items: center;
+    justify-items: auto;
+    justify-self: center;
+    text-align: center;
+}
+h1 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+    color: var(--green-color);
+    font-family: 'Luckiest Guy', sans-serif;
+    padding: 10px 10px 10px 100px;
+    margin: 150px 5px 10px 5px;
+    font-size: 3.5rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
 /* ****************************** */
 /* ****************************** */   
 /* Media Query section */
@@ -176,7 +345,7 @@ p {
         background-color: green;
     }
      .header {
-     grid-template-rows: 1fr 1fr 1fr;
+     grid-template-rows: 0.7fr 0.5fr 1fr;
      grid-template-columns: 1fr;
      align-items: center;
      row-gap: 10px;
@@ -201,6 +370,87 @@ p {
         grid-column: 1;
         padding:0px;
      }
+     .grid-list-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin:100px auto;
+        padding: 20px;
+        gap:30px;
+        max-width:1440px;
     }
-
-
+    .grid-list1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .grid-list2 {
+        grid-column:1;
+    }
+     i>span {
+        line-height: 2.2;
+    }  
+    .grid-list3 {
+        grid-column: 1;
+        grid-row:2
+    }
+}
+/* ****************************** */
+/* ****************************** */   
+/* Media Query section */
+  /* tablet */
+  @media (max-width: 1050px) {
+    .container {
+        align-items: center;
+        margin: 5px;
+        padding: 5px;
+        width: 100%;
+        background-color: green;
+    }
+     .header {
+     grid-template-rows: 0.5fr 0.3fr 0.7fr;
+     grid-template-columns: 1fr;
+     align-items: center;
+     row-gap: 10px;
+     margin: auto;
+     padding:5px;
+     width: 100%;
+     background-color:var(--dark-color);
+     text-align: center;
+     }
+     .header-pic {
+        grid-row: 1;
+        grid-column: 1;
+        margin:5px;
+        justify-self:center;
+     }
+     .header-h2 {
+        grid-row: 2;
+        grid-column: 1;
+     }
+     .header-h1 {
+        grid-row: 3;
+        grid-column: 1;
+        padding:0px;
+     }
+     .grid-list-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin:100px auto;
+        padding: 20px;
+        gap:30px;
+        max-width:1440px;
+    }
+    .grid-list1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .grid-list2 {
+        grid-column:1;
+    }
+     i>span {
+        line-height: 2.2;
+    }  
+    .grid-list3 {
+        grid-column: 1;
+        grid-row:2
+    }
+}
