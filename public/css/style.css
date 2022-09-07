@@ -370,27 +370,41 @@ h1 {
         grid-column: 1;
         padding:0px;
      }
-     .grid-list-container {
+        .grid-list-container {
         display: grid;
         grid-template-columns: 1fr;
         margin:100px auto;
         padding: 20px;
         gap:30px;
-        max-width:1440px;
+        width:100%;
     }
     .grid-list1 {
         grid-column: 1;
         grid-row: 1;
+        margin-left: -40px;
     }
     .grid-list2 {
         grid-column:1;
+        margin-left:-20px;
     }
      i>span {
         line-height: 2.2;
     }  
     .grid-list3 {
         grid-column: 1;
-        grid-row:2
+        grid-row:2;
+        margin-left:-20px;
+        width:100%;
+    }
+    .signup-card {
+        margin-left:-20px;
+        width:100%
+    }
+    input{
+        width:100%;
+    }
+    .homepage h1{
+        margin-left:-45px;
     }
 }
 /* ****************************** */
