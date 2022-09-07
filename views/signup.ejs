@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Sign Up</title>
 </head>
 <body>
+<div class="outside">  
     <!-- Header -->
     <div class="container">
         <div class="header">
@@ -25,13 +26,20 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
+    <div class="signup-card">
+    <h2>Fill in the following fields to create an account...</h2>
     <form action="/signup" method="POST">
         <input type="text" name="userName" placeholder="User Name">
+        <br>
         <input type="email" name="email" placeholder="Email">
+        <br>
         <input type="password" name="password" placeholder="Password">
+        <br>
         <input type="password" name="confirmPassword" placeholder="Confirm Password">
-        <input type="submit">
+        <br>
+        <input type="submit" value="Submit">
     </form>
+    </div>
 </div>
 
     <!-- Footer-->
@@ -41,6 +49,6 @@
                 <p class="footer-p">Project Super Team &copy; 2022</p>
         </div>
     </div>
-
+</div>
 </body>
 </html>

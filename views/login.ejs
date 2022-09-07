@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+<div class="outside">   
     <!-- Header -->
     <div class="container">
         <div class="header">
@@ -31,10 +32,12 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form action="/login" method="POST">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit">
+    <form  action="/login" method="POST">
+        <input type="email" name="email" placeholder="Enter your email address">
+        <br>
+        <input type="password" name="password" placeholder="Enter your password">
+        <br>
+        <input class="button-format" type="submit" value="Submit">
     </form>
 </div>
  
@@ -45,5 +48,6 @@
                 <p class="footer-p">Project Super Team &copy; 2022</p>
         </div>
     </div>   
+</div>
 </body>
 </html>
